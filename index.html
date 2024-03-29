@@ -3,8 +3,12 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#000000" />
     <meta name="apple-mobile-web-app-capable" content="yes" />
-    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <meta
+      name="apple-mobile-web-app-status-bar-style"
+      content="black-translucent"
+    />
     <meta name="apple-mobile-web-app-title" content="restoe" />
     <link rel="apple-touch-icon" href="favicon.ico" />
     <link rel="icon" type="image/x-icon" href="/favicon.ico" />
@@ -30,7 +34,7 @@
     <div class="cursor"></div>
 
     <div id="loader-wrapper" class="loader-wrapper">
-      <div id="loader" class="loader circle-loader">
+      <div id="loader" class="loader box-loader">
         <span></span>
         <span></span>
         <span></span>
@@ -43,50 +47,47 @@
       <div style="color: #fbbc04; font-size: 3rem; text-align: center">
         Restoe
       </div>
-      <div
-        style="color: white; font-size: 4rem; text-align: center; height: auto"
-      >
+      <div style="color: white; font-size: 4rem; text-align: center">
         Unlocking Paw-ter's Realm
       </div>
-      <div style="color: white; text-align: center">Coming soon...</div>
+      <div style="color: white; text-align: center; height: 10ch">
+        Coming soon...
+      </div>
 
-      <ul>
+      <ul class="social-icons">
         <li>
           <a
             href="https://www.instagram.com/restoe.care?igsh=NnNjN2RyejljN3Fw&utm_source=qr"
-          >
-            <i class="fab fa-instagram" style="color: white"></i>
-          </a>
+            ><i class="fab fa-instagram" style="color: white"></i
+          ></a>
         </li>
         <li>
-          <a href="https://www.linkedin.com/company/restoe/">
-            <i class="fab fa-linkedin" style="color: white"></i>
-          </a>
+          <a href="https://www.linkedin.com/company/restoe/"
+            ><i class="fab fa-linkedin" style="color: white"></i
+          ></a>
         </li>
         <li>
           <a
             href="https://mail.google.com/mail/?view=cm&fs=1&to=restore.care@gmail.com&su=How%20can%20we%20help%20you%3F&body=Hi%20there%2C"
             target="_blank"
-          >
-            <i class="fas fa-envelope" style="color: white"></i>
-          </a>
+            ><i class="fas fa-envelope" style="color: white"></i
+          ></a>
         </li>
       </ul>
-
-      <img class="logo" src="assets/images/logo.png" alt="Logo" />
     </div>
-
-    <script>
-      window.addEventListener("load", function () {
-        var loader = document.getElementById("loader-wrapper");
-        var content = document.querySelector(".content-wrapper");
-        setTimeout(function () {
-          loader.classList.add("sumir");
-          content.style.opacity = "1";
-          content.style.visibility = "visible";
-        }, 2000);
-      });
-    </script>
-    <script src="js/cursor.js"></script>
+  
+      <script>
+        window.addEventListener("load", function () {
+          var loader = document.getElementById("loader-wrapper");
+          var content = document.querySelector(".content-wrapper");
+          setTimeout(function () {
+            loader.classList.add("sumir");
+            content.style.opacity = "1";
+            content.style.visibility = "visible";
+          }, 2000);
+        });
+      </script>
+      <script src="js/cursor.js"></script>
+    </p>
   </body>
 </html>

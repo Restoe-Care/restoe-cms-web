@@ -68,14 +68,20 @@
   border: 1px solid red;
 }
 
-p {
-  color: white;
-  font-family: "arial";
-  text-align: center;
-  margin-top: 50px;
-  font-size: 1.4em;
+@media (hover: none) {
+  .cursor {
+    display: none;
+  }
+}
 
-  a {
-    color: teal;
+@media only screen and (max-width: 768px) {
+  .cursor {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .cursor {
+    display: none;
   }
 }
