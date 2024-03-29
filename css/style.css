@@ -1,0 +1,114 @@
+@font-face {
+  font-family: blackMango; /* This is the name you'll use to reference the font */
+  src: url("/assets/fonts/black-mango.ttf") format("truetype"); /* Adjust the path and format as needed */
+}
+
+@media only screen and (max-width: 768px) {
+  .container div:nth-child(1),  /* Target first div inside container */
+    .container div:nth-child(2) {
+    /* Target second div inside container */
+    font-size: 2rem; /* Adjust font size to your preference */
+  }
+}
+
+body {
+  cursor: none;
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  overflow: hidden; /* Disabling scrolling */
+  background-size: cover;
+
+  background-image: url("/assets/images/background.png"); /* Adjust the path as needed */
+  background-position: center;
+  background-attachment: fixed;
+  font-family: "/assets/fonts/black-mango.ttf", blackMango; /* Replace 'YourCustomFont' with your custom font name */
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.logo {
+  position: fixed;
+  bottom: -3%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100px; /* Adjust as needed */
+  height: auto; /* Adjust as needed */
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  position: absolute;
+  bottom: 10%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+ul li {
+  list-style: none;
+  margin: 0 15px;
+}
+
+ul li a {
+  position: relative;
+  display: block;
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  line-height: 40px;
+  background: #333;
+  border-radius: 50%;
+  font-size: 20px;
+  color: #666;
+  transition: 0.5s;
+}
+
+ul li a::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background: #ffe600;
+  transition: 0.5s;
+  transform: scale(0.9);
+  z-index: -1;
+}
+
+ul li a:hover::before {
+  transform: scale(1.1);
+  box-shadow: 0 0 15px #ffe600;
+}
+
+ul li a:hover {
+  color: #ffe600;
+  box-shadow: 0 0 5px #ffe600;
+  text-shadow: 0 0 5px #ffe600;
+}
+
+
+a.effect-shine:hover {
+    -webkit-mask-image: linear-gradient(-75deg, rgba(0,0,0,.6) 30%, #000 50%, rgba(0,0,0,.6) 70%);
+    -webkit-mask-size: 200%;
+    animation: shine 2s infinite;
+  }
+  
+  @-webkit-keyframes shine {
+    from {
+      -webkit-mask-position: 150%;
+    }
+    
+    to {
+      -webkit-mask-position: -50%;
+    }
+  }
